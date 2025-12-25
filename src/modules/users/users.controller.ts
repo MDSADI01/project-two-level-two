@@ -40,7 +40,7 @@ const getAllUSers = async(req:Request,res:Response)=>{
 
     const getSingleUser = async(req:Request,res:Response)=>{
         try{
-            const result = await userServices.getSingleUser(req.params.id as string);
+            const result = await userServices.getSingleUser(req.params.userId as string);
             if(result.rows.length === 0){
                 res.status(404).json({
                     success:false,
